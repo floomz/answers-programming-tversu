@@ -8,16 +8,16 @@ namespace Learn
         {
             Console.Write("Введите число: ");
             int num = Convert.ToInt32(Console.ReadLine());
-            int[] dividers;  //Объявление массива, в котором будут лежать числители
-            int j = 0;  //Вспомогательная переменная
+            int[] dividers;  // Объявление массива, в котором будут лежать числители
+            int j = 0;  // Вспомогательная переменная
 
 
             if (num > 0)
             {
-                dividers = new int[num];  //Если num больше 0, то создаем массив длинной num
-                Console.WriteLine($"Число {num} положительное.");  //Проверка на положительность
+                dividers = new int[num];  // Если num больше 0, то создаем массив длинной num
+                Console.WriteLine($"Число {num} положительное.");  // Проверка на положительность
 
-                if (num % 2 == 0)  //Проверка на четность
+                if (num % 2 == 0)  // Проверка на четность
                 {
                     Console.WriteLine($"Число {num} четное.");
                 }
@@ -26,7 +26,7 @@ namespace Learn
                     Console.WriteLine($"Число {num} нечетное.");
                 }
 
-                for (int i = 1; i <= num; i++)  //Заполняем массив dividers числителями num
+                for (int i = 1; i <= num; i++)  // Заполняем массив dividers числителями num
                 {
                     if (num % i == 0)
                     {
@@ -35,12 +35,12 @@ namespace Learn
                     }
                 }
 
-                if (dividers.Length > 2)  //Проверка на составность числа
+                if (dividers.Length > 2)  // Проверка на составность числа
                 {
                     Console.WriteLine($"Число {num} составное.");
                     Console.Write($"Делители числа {num}: ");
 
-                    for (int k = 0; k < dividers.Length; k++)  //Вывод числителей num
+                    for (int k = 0; k < dividers.Length; k++)  // Вывод числителей num
                     {
                         if (dividers[k] != 0)
                         {
