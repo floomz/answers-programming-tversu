@@ -13,18 +13,11 @@ namespace Learn
             string s = Console.ReadLine();
             List<int> array = new List<int>();  // Я хуй знает, как решить эту задачу через массивы, поэтому тут будет список целых чисел List
 
-            while (true)  // Бесконечный цикл
+            while (int.TryParse(s, out a))  // Если s можно преобразовать в int, тогда цикл сработает
             {
-                if (int.TryParse(s, out a))  // Если s можно преобразовать в int, тогда преобразовываем
-                {
-                    array.Add(Convert.ToInt32(s));  // Добавление в список введенное число
-                    Console.Write("Введите число: ");
-                    s = Console.ReadLine();
-                }
-                else
-                {
-                    break;  // Если s нельзя преобразовать в int, тогда запускается блок else, в котором останавливаем цикл
-                }
+                array.Add(Convert.ToInt32(s));  // Добавление в список введенное число
+                Console.Write("Введите число: ");
+                s = Console.ReadLine();
             }
 
             for (int i = 0; i < array.Count; i++)  // Сумма всех элементов (array.Count — это длинна списка array)
